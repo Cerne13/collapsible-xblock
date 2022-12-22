@@ -9,12 +9,6 @@ for (let item of collapseElems) {
 
             let content = item.nextElementSibling;
 
-            // if (content.style.display === "block") {
-            //     content.style.display = "none";
-            // } else {
-            //     content.style.display = "block";
-            // }
-
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
