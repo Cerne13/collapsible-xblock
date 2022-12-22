@@ -6,26 +6,10 @@ Made as a test task.
 import pkg_resources
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Integer, Scope, String
+from xblock.fields import Scope, String
 
 
 class TestXBlock(XBlock):
-    """
-    The block shows a collapsable div with editable title and content.
-    Title and content are passed to view as context and are edited
-    inside students_view method.
-    """
-
-    # Fields are defined on the class.  You can access them in your code as
-    # self.<fieldname>.
-
-    # TO-DO: delete count, and define your own fields.
-    count = Integer(
-        default=0,
-        scope=Scope.user_state,
-        help="A simple counter, to show something happening",
-    )
-
     title = String(
         default="Here be the title!",
         scope=Scope.content,
@@ -52,19 +36,6 @@ class TestXBlock(XBlock):
         frag.add_javascript(self.resource_string("static/js/src/testxblock.js"))
         frag.initialize_js('TestXBlock')
         return frag
-
-    # TO-DO: change this handler to perform your own actions.  You may need more
-    # than one handler, or you may not need any handlers at all.
-    # @XBlock.json_handler
-    # def increment_count(self, data, suffix=''):
-    #     """
-    #     An example handler, which increments the data.
-    #     """
-    #     # Just to show data coming in...
-    #     assert data['hello'] == 'world'
-    #
-    #     self.count += 1
-    #     return {"count": self.count}
 
     @staticmethod
     def workbench_scenarios():

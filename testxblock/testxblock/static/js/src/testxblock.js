@@ -1,7 +1,6 @@
 const collapseElems = document.querySelectorAll(".collapsable");
 
 for (let item of collapseElems) {
-    console.log(item)
     item.addEventListener(
         "click",
         () => {
