@@ -10,8 +10,10 @@ for (let item of collapseElems) {
 
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
+                content.style.overflow = "hidden";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
+                content.style.overflow = "auto";
             }
         });
 }

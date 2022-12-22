@@ -11,7 +11,7 @@ from xblock.fields import Scope, String
 
 class TestXBlock(XBlock):
     title = String(
-        default="Here be the title!",
+        default="The titliest title ever",
         scope=Scope.content,
         help="Block header title"
     )
