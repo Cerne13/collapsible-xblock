@@ -22,7 +22,7 @@ source venv/bin/activate
 
 - clone this repository into the created directory
 ```
-
+https://github.com/Cerne13/collapsible-xblock.git
 ```
 
 - clone eDx xBlock SDK into the main directory
