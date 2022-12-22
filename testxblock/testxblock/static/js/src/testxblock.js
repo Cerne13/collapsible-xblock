@@ -1,22 +1,24 @@
-/* Javascript for TestXBlock. */
-function TestXBlock(runtime, element) {
+const collapseElems = document.querySelectorAll(".collapsable");
 
-    function updateCount(result) {
-        $('.count', element).text(result.count);
-    }
+for (let item of collapseElems) {
+    console.log(item)
+    item.addEventListener(
+        "click",
+        () => {
+            item.classList.toggle("active");
 
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
+            let content = item.nextElementSibling;
 
-    $('p', element).click(function(eventObject) {
-        $.ajax({
-            type: "POST",
-            url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
+            // if (content.style.display === "block") {
+            //     content.style.display = "none";
+            // } else {
+            //     content.style.display = "block";
+            // }
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
         });
-    });
-
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
-    });
 }
