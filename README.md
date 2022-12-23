@@ -5,15 +5,15 @@ with eDx xBlock technology.
 ***
 ## How to install
 
-- make a new directory and navigate into it
+- Be sure you're using Python 3.8 to avoid troubles installing the project
 
+- make a new directory and navigate into it
 
 
 - create a new virtual environment
 ```
 python3 -m venv venv
 ```
-
 
 - activate created virtual environment
 ```

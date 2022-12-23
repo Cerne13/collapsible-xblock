@@ -3,6 +3,6 @@ venv
 var
 xblock-sdk
 workbench
-__pycache__/
+__pycache__
 *.log
 *.pyc
