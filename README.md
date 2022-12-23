@@ -3,7 +3,10 @@
 with eDx xBlock technology.
 
 ***
-## How to install
+### How to install
+
+It is strongly recommended that you use Linux/Mac while working with technology.\
+Using Windows may cause unpredictable troubles while installing your project and SDK.
 
 - Be sure you're using Python 3.8 to avoid troubles installing the project
 
@@ -42,7 +45,7 @@ python manage.py migrate
 ```
 
 - return to main project directory
-```angular2html
+```
 cd ..
 ```
 
@@ -54,4 +57,32 @@ pip install -e testxblock
 - run local server
 ```
 python xblock-sdk\manage.py runserver
+```
+
+***
+### Troubleshooting
+
+There can be some cases when SDK doesn't install all the dependencies properly.
+In that case you will see a PluginMissingError when attempting to launch the xBlock.
+
+To get rid of the problem you should:
+
+- navigate to the SDK folder
+```
+cd xblock-sdk
+```
+- make sure you have a var folder (if not, create it manually)
+
+
+Then:
+
+- if you are on Linux/Mac
+<br/>
+run
+```
+make install
+```
+- if you are on Windows:
+```
+pip install -qr requirements/dev.txt --exists-action w
 ```
