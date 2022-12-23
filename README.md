@@ -76,8 +76,7 @@ cd xblock-sdk
 
 Then:
 
-- if you are on Linux/Mac
-<br/>
+- if you are on Linux/Mac\
 run
 ```
 make install
